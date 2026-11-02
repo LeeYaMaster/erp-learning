@@ -1,0 +1,23 @@
+{
+  "name": "erp-learning",
+  "private": true,
+  "version": "1.0.0",
+  "description": "进销存 ERP 学习版 - 基础资料 → 采购入库 → 库存 → 销售出库",
+  "scripts": {
+    "dev:api": "pnpm --filter @erp/api start:dev",
+    "dev:web": "pnpm --filter @erp/web dev",
+    "build:api": "pnpm --filter @erp/api build",
+    "build:web": "pnpm --filter @erp/web build",
+    "seed": "pnpm --filter @erp/api seed"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "esbuild",
+      "bcryptjs"
+    ]
+  }
+}
